@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<meta charset="utf-8">
+<!-- <link rel="shortcut icon" href="logo.gif" > -->
+<title></title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <h1> test </h1>
+
+    <form id="testform">
+
+        <a id="gt_login" href="javascript:void(0)" />github login</a><br />
+        <a id="go_login" href="javascript:void(0)" />google login</a><br />
+        
+
+    </form>
+
+    <script src="/dist/oauth-js-lib.js"></script>
+
+
+    <script>
+        var testOauth = {
+            clientId: '660251240215.apps.googleusercontent.com',
+            redirectUri: 'http://localhost:3000/auth/google/callback',
+            scopes: ['https://www.googleapis.com/auth/userinfo.email'],
+            button_id: 'go_login',
+            provider:'google'
+        }
+
+window.login=loginapp([testOauth])
+
+
+
+    </script>
+
+</body>
+
+</html>

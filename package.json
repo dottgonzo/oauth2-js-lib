@@ -4,7 +4,7 @@
   "description": "oauth2 class for auth forms",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/tsc && browserify index.js > dist/oauth-js-lib.js"
+    "build": "./node_modules/.bin/tsc && browserify import.js > dist/oauth-js-lib.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/dottgonzo/oauth2-js-lib#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "client-oauth2": "^4.1.0",
     "jquery": "^3.2.1"
   },
