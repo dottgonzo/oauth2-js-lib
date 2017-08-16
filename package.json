@@ -1,0 +1,33 @@
+{
+  "name": "oauth2-js-lib",
+  "version": "0.0.1",
+  "description": "oauth2 class for auth forms",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc && browserify index.js > dist/oauth-js-lib.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dottgonzo/oauth2-js-lib.git"
+  },
+  "keywords": [
+    "auth",
+    "form",
+    "oauth2",
+    "passport"
+  ],
+  "author": "Dario Caruso",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dottgonzo/oauth2-js-lib/issues"
+  },
+  "homepage": "https://github.com/dottgonzo/oauth2-js-lib#readme",
+  "dependencies": {
+    "client-oauth2": "^4.1.0",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "typescript": "^2.4.2"
+  }
+}
