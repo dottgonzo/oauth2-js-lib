@@ -74,7 +74,7 @@ var authComposer = (function () {
         };
         window.localStorage.setItem('_tokenAppLocal', this.token);
         window.localStorage.setItem('_userAppLocal', JSON.stringify(this.profile));
-        this.onlogin();
+        this.onlogin({ token: this.token, profile: this.profile });
     };
     authComposer.prototype.logout = function () {
         this.token = false;
