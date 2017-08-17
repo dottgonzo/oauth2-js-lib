@@ -88,9 +88,9 @@ export class authComposer {
       }
     }
 
+const oauthf='oAuth2cb_'+Date.now()
 
-
-    window['oauth2Callback'] = function (callback: IOauth2Callback | any) {
+    window[oauthf] = function (callback: IOauth2Callback | any) {
       console.log('callbackfromauth')
       console.log(callback)
       if (callback && callback.data && callback.data.token) {
@@ -101,7 +101,7 @@ export class authComposer {
       }
     }
 
-    window.addEventListener('message', window['oauth2Callback'], false);
+    window.addEventListener('message', window[oauthf], false);
 
   }
 

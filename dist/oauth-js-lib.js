@@ -52,7 +52,8 @@ var authComposer = (function () {
                 that.addAuth(oauthConfig);
             }
         }
-        window['oauth2Callback'] = function (callback) {
+        var oauthf = 'oAuth2cb_' + Date.now();
+        window[oauthf] = function (callback) {
             console.log('callbackfromauth');
             console.log(callback);
             if (callback && callback.data && callback.data.token) {
@@ -63,7 +64,7 @@ var authComposer = (function () {
                 console.log('invalid message token');
             }
         };
-        window.addEventListener('message', window['oauth2Callback'], false);
+        window.addEventListener('message', window[oauthf], false);
     }
     authComposer.prototype.setUser = function (user) {
         this.token = user.token;
