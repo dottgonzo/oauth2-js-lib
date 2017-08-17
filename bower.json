@@ -1,0 +1,16 @@
+{
+  "name": "oauth2-js-lib",
+  "description": "oauth2 class for auth forms",
+  "main": "dist/oauth-js-lib.js",
+  "authors": [
+    "Dario Caruso"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "auth",
+    "form",
+    "oauth2",
+    "passport"
+  ],
+  "homepage": "https://github.com/dottgonzo/oauth2-js-lib"
+}
