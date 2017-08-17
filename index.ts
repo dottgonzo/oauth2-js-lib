@@ -101,7 +101,7 @@ export class authComposer {
       }
     }
 
-    window.addEventListener("message", window['oauth2Callback'], false);
+    window.addEventListener('message', window['oauth2Callback'], false);
 
   }
 

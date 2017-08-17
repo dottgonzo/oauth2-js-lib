@@ -54,7 +54,7 @@ var authComposer = (function () {
                 console.log('invalid message token');
             }
         };
-        window.addEventListener("message", window['oauth2Callback'], false);
+        window.addEventListener('message', window['oauth2Callback'], false);
     }
     authComposer.prototype.setUser = function (user) {
         this.token = user.token;
@@ -113,6 +113,8 @@ var authComposer = (function () {
         switch (oauthConfig.provider) {
             case 'facebook':
                 that.facebook = new ClientOAuth2(oauthConfig);
+                if (!oauthConfig.scopes)
+                    oauthConfig.scopes = ['emails'];
                 if (!oauthConfig.accessTokenUri)
                     oauthConfig.accessTokenUri = 'https://graph.facebook.com/v2.10/oauth/access_token';
                 if (!oauthConfig.authorizationUri)
