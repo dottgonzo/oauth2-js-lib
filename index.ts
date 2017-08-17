@@ -42,7 +42,7 @@ function authorizeWindow(url) {
 
   let HTMLstring = '<html>\n';
   HTMLstring += '<head>\n';
-  HTMLstring += '<title>New Document</title>\n';
+  HTMLstring += '<title>Authorization</title>\n';
   HTMLstring += '</head>\n';
   HTMLstring += '<body>\n';
   HTMLstring += '<iframe frameborder="0" id="framelogin" width="100%" height="100%" style="height:100%;width:100%" src="' + url + '"></iframe>\n';
@@ -57,6 +57,7 @@ function authorizeWindow(url) {
 
 
 function triggerclick(el, url) {
+  // autoresizeonclick
   $('#' + el).on('click', function (e) {
     authorizeWindow(url)
   })
