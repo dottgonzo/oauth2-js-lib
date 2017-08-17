@@ -24,26 +24,20 @@
 
         <a id="gt_login" href="javascript:void(0)" />github login</a><br />
         <a id="go_login" href="javascript:void(0)" />google login</a><br />
-        
+
 
     </form>
 
     <script src="/dist/oauth-js-lib.js"></script>
 
-
     <script>
-        var testOauth = {
+        var testGoogle = {
             clientId: '660251240215.apps.googleusercontent.com',
-            redirectUri: 'http://localhost:3000/auth/google/callback',
-            scopes: ['https://www.googleapis.com/auth/userinfo.email'],
             button_id: 'go_login',
-            provider:'google'
+            provider: 'google'
         }
 
-window.login=loginapp([testOauth])
-
-
-
+        window.login = loginapp('http://localhost:3000',[testGoogle])
     </script>
 
 </body>
