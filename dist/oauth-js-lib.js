@@ -15,17 +15,7 @@ var axios = require("axios");
 function authorizeWindow(url) {
     var height = 600;
     var width = 400;
-    var win = window.open("", "Title", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=" + width + ", height=" + height + ", top=" + (screen.height - 400) + ", left=" + (screen.width - 840));
-    var HTMLstring = '<html>\n';
-    HTMLstring += '<head>\n';
-    HTMLstring += '<title>Authorization</title>\n';
-    HTMLstring += '</head>\n';
-    HTMLstring += '<body>\n';
-    HTMLstring += '<iframe frameborder="0" id="framelogin" width="100%" height="100%" style="height:100%;width:100%" src="' + url + '"></iframe>\n';
-    HTMLstring += '</body>\n';
-    HTMLstring += '</html>';
-    win.document.write(HTMLstring);
-    win.document.close();
+    var win = window.open(url);
 }
 function triggerclick(el, url) {
     $('#' + el).on('click', function (e) {
