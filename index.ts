@@ -162,7 +162,7 @@ const oauthf='oAuth2cb_'+Date.now()
       case 'facebook':
         that.facebook = new ClientOAuth2(oauthConfig)
 
-        if (!oauthConfig.scopes) oauthConfig.scopes = ['emails']
+        if (!oauthConfig.scopes) oauthConfig.scopes = ['email']
           
 
         if (!oauthConfig.accessTokenUri) oauthConfig.accessTokenUri = 'https://graph.facebook.com/v2.10/oauth/access_token'
