@@ -1,6 +1,6 @@
 {
   "name": "oauth2-js-lib",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "oauth2 class for auth forms",
   "main": "index.js",
   "scripts": {
