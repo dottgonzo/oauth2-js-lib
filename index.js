@@ -105,7 +105,7 @@ var authComposer = (function () {
             case 'facebook':
                 that.facebook = new ClientOAuth2(oauthConfig);
                 if (!oauthConfig.scopes)
-                    oauthConfig.scopes = ['email'];
+                    oauthConfig.scopes = ['email', 'user_birthday', 'user_hometown'];
                 if (!oauthConfig.accessTokenUri)
                     oauthConfig.accessTokenUri = 'https://graph.facebook.com/v2.10/oauth/access_token';
                 if (!oauthConfig.authorizationUri)
@@ -115,7 +115,7 @@ var authComposer = (function () {
             case 'google':
                 that.google = new ClientOAuth2(oauthConfig);
                 if (!oauthConfig.scopes)
-                    oauthConfig.scopes = ['https://www.googleapis.com/auth/userinfo.email'];
+                    oauthConfig.scopes = ['https://www.googleapis.com/auth/user.phonenumbers.read', 'email', 'https://www.googleapis.com/auth/user.birthday.read', 'https://www.googleapis.com/auth/user.addresses.read', 'https://www.googleapis.com/auth/userinfo.profile'];
                 if (!oauthConfig.accessTokenUri)
                     oauthConfig.accessTokenUri = 'https://www.googleapis.com/oauth2/v4/token';
                 if (!oauthConfig.authorizationUri)
