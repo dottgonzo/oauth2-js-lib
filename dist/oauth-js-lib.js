@@ -114,7 +114,7 @@ var authComposer = (function () {
             case 'facebook':
                 that.facebook = new ClientOAuth2(oauthConfig);
                 if (!oauthConfig.scopes)
-                    oauthConfig.scopes = ['email', 'user_birthday', 'user_hometown'];
+                    oauthConfig.scopes = ['email'];
                 if (!oauthConfig.accessTokenUri)
                     oauthConfig.accessTokenUri = 'https://graph.facebook.com/v2.10/oauth/access_token';
                 if (!oauthConfig.authorizationUri)
