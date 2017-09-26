@@ -173,7 +173,7 @@ const oauthf='oAuth2cb_'+Date.now()
       case 'google':
         that.google = new ClientOAuth2(oauthConfig)
 
-        if (!oauthConfig.scopes) oauthConfig.scopes = ['https://www.googleapis.com/auth/user.phonenumbers.read','email','https://www.googleapis.com/auth/user.birthday.read','https://www.googleapis.com/auth/user.addresses.read','https://www.googleapis.com/auth/userinfo.profile']
+        if (!oauthConfig.scopes) oauthConfig.scopes = ['email']
 
         if (!oauthConfig.accessTokenUri) oauthConfig.accessTokenUri = 'https://www.googleapis.com/oauth2/v4/token'
         if (!oauthConfig.authorizationUri) oauthConfig.authorizationUri = 'https://accounts.google.com/o/oauth2/v2/auth'

@@ -124,7 +124,7 @@ var authComposer = (function () {
             case 'google':
                 that.google = new ClientOAuth2(oauthConfig);
                 if (!oauthConfig.scopes)
-                    oauthConfig.scopes = ['https://www.googleapis.com/auth/user.phonenumbers.read', 'email', 'https://www.googleapis.com/auth/user.birthday.read', 'https://www.googleapis.com/auth/user.addresses.read', 'https://www.googleapis.com/auth/userinfo.profile'];
+                    oauthConfig.scopes = ['email'];
                 if (!oauthConfig.accessTokenUri)
                     oauthConfig.accessTokenUri = 'https://www.googleapis.com/oauth2/v4/token';
                 if (!oauthConfig.authorizationUri)
